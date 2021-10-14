@@ -12,9 +12,43 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a02baed46b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <form id="search-form">
+        <input
+          class="search-bar"
+          type="search"
+          placeholder="Enter city"
+          autofocus="on"
+          autocomplete="off"
+          id="search-input"
+        />
+        <input class="search-button" type="submit" value="search" />
+      </form>
+      <h1 class="current-city" id="current-city">Sydney</h1>
+      <div class="current-date-and-time" id="current-date-and-time">
+        Thursday 1:52
+      </div>
+      <div class="humidity">
+        Humidity:
+        <span class="current-humidity" id="current-humidity">50%</span>
+      </div>
+      <div class="wind">
+        Wind:
+        <span class="current-windspeed" id="current-windspeed">5km/hr</span>
+      </div>
+      <div class="row">
+        <div class="col">
+          20° C | <span><a href="#">F</a></span>
+        </div>
+        <div class="col">Rain <i class="fas fa-cloud-rain rain-cloud"></i></div>
+      </div>
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
