@@ -11,12 +11,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-
-    <script
-      src="https://kit.fontawesome.com/a02baed46b.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <div class="container p-4 mt-5 mb-5">
@@ -33,31 +29,39 @@
             />
             <input class="search-button" type="submit" value="Search" />
           </form>
-          <h1 class="current-city" id="current-city">Sydney</h1>
-          <div class="current-date-and-time" id="current-date-and-time">
-            Thursday 1:52
+          <h1 class="current-city" id="current-city"></h1>
+          <div class="current-date-and-time">
+            Last updated: <span id="current-date-and-time"></span>
           </div>
-          <div class="humidity">
+          <div>
             Humidity:
-            <span class="current-humidity" id="current-humidity">50%</span>
+            <span class="current-humidity" id="current-humidity"></span> %
           </div>
-          <div class="wind">
+          <div>
             Wind:
-            <span class="current-windspeed" id="current-windspeed">5km/hr</span>
+            <span class="current-windspeed" id="current-windspeed"></span> km/hr
           </div>
           <div class="row">
-            <div class="col current-temp">
-              20 <span class="units">°C | <a href="#">°F</a></span>
+            <div class="col temp-section">
+              <span class="current-temp" id="current-temp"></span>
+              <span class="units"
+                ><a href="#" class="active" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
             </div>
-            <div class="col-5 current-conditions">
-              Rain
-              <span class="conditions-image"
-                ><i class="fas fa-cloud-rain rain-cloud"></i
-              ></span>
+            <div class="col current-conditions" id="current-conditions"></div>
+            <div class="col conditions-image">
+              <img src="" id="conditions-image" />
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="footnote">
+      <a href="https://github.com/Ivyvxxz/weather-app" target="_blank"
+        >Open-source code</a
+      >
+      by Bec Cresnik
     </div>
     <script src="src/app.js"></script>
   </body>

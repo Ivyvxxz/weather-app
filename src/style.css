@@ -25,24 +25,55 @@
   background-color: #000;
   color: #fff;
   width: 100px;
-  margin-left: 20px;
+  margin-left: 24px;
   height: 40px;
 }
 .current-city {
   font-size: 65px;
+  margin-bottom: 0px;
+}
+.current-city,
+.current-temp {
+  font-weight: bold;
 }
 .current-date-and-time {
-  font-size: 30px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.temp-section {
+  margin-top: 25px;
 }
 .current-temp {
   font-size: 58px;
-  font-weight: bold;
 }
 .units {
-  font-size: 30px;
+  font-size: 20px;
   position: relative;
-  top: -18px;
+  top: -28px;
+}
+.active {
+  color: #3c5186;
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
 }
 .current-conditions {
-  font-size: 40px;
+  font-size: 22px;
+  margin-top: 40px;
+}
+.current-conditions:first-letter {
+  text-transform: capitalize;
+}
+.conditions-image {
+  margin-top: 20px;
+}
+.footnote {
+  margin-top: -50px;
+}
+.current-conditions,
+.conditions-image,
+.footnote {
+  text-align: center;
 }
