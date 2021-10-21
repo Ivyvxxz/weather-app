@@ -3,19 +3,27 @@
   background-image: url("../images/sky.jpeg");
 }
 .card.top {
-  margin-left: 45px;
   padding-left: 22px;
+}
+.card.top,
+.card.bottom {
+  margin-left: 45px;
   background: rgba(255, 250, 250, 0.35);
 }
 .container,
 .card.top,
+.card.bottom,
 .search-bar,
 .search-button {
   border: 2px solid #000;
 }
 .container,
-.card.top {
+.card.top,
+.card.bottom {
   border-radius: 8px;
+}
+.card.bottom {
+  margin-top: 15px;
 }
 .search-bar {
   width: 300px;
@@ -33,7 +41,9 @@
   margin-bottom: 0px;
 }
 .current-city,
-.current-temp {
+.current-temp,
+.forecast-day,
+.forecast-temp-max {
   font-weight: bold;
 }
 .current-date-and-time {
@@ -74,6 +84,9 @@
 }
 .current-conditions,
 .conditions-image,
+.forecast-day,
+.forecast-conditions,
+.forecast-temps,
 .footnote {
   text-align: center;
 }
