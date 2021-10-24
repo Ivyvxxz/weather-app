@@ -73,20 +73,27 @@
   font-size: 22px;
   margin-top: 40px;
 }
-.current-conditions:first-letter {
+.current-conditions:first-letter,
+.forecast-conditions:first-letter {
   text-transform: capitalize;
 }
 .conditions-image {
   margin-top: 20px;
 }
+.forecast-image {
+  max-width: 30px;
+}
 .footnote {
   margin-top: -50px;
 }
+
 .current-conditions,
 .conditions-image,
 .forecast-day,
 .forecast-conditions,
-.forecast-temps,
 .footnote {
   text-align: center;
+}
+.forecast-temps {
+  text-align: right;
 }
