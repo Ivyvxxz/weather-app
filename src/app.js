@@ -42,6 +42,24 @@ function showData(response) {
   );
 }
 
+function showForecast() {
+  let forecastCard = document.querySelector("#forecast-card");
+  let forecastHTML = `<div class="row">
+  <div class="col forecast-day">Thursday</div>
+  <div class="col forecast-conditions">
+  <img src="" />
+  Scattered showers
+  </div>
+  <div class="col forecast-temps">
+  <span class="forecast-temp-max"> 18</span>°<span
+  class="forecast-temp-min"
+  >12</span
+  >°
+  </div>
+  </div>`;
+  forecastCard.innerHTML = forecastHTML;
+}
+
 function placeholder(city) {
   let apiKey = "8944afa6845bd7c413a687258d3211ef";
   let units = "metric";
