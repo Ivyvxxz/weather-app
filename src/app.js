@@ -75,8 +75,10 @@ function showForecast(response) {
       ${forecastDay.weather[0].description}
       </div>
       <div class="col-3 forecast-temps">
-      <span class="forecast-temp-max"> ${Math.round(forecastDay.temp.max)}  
-      </span>°<span class="forecast-temp-min">${Math.round(
+      <span class="forecast-temp-max"> ${Math.round(
+        forecastDay.temp.max
+      )}</span>°
+      <span class="forecast-temp-min">${Math.round(
         forecastDay.temp.min
       )}</span>°
       </div>
@@ -84,7 +86,6 @@ function showForecast(response) {
     }
   });
   forecastCard.innerHTML = forecastHTML + `</div>`;
-  console.log(response.data.daily);
 }
 
 function getForecastResponse(coordinates) {
@@ -107,32 +108,9 @@ function changePlaceholderValue(event) {
   placeholder(searchInput.value);
 }
 
-function fahrenheitConversion(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temp = document.querySelector("#current-temp");
-  temp.innerHTML = Math.round(fahrenheitTemperature);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-function celsiusConversion(event) {
-  event.preventDefault();
-  let temp = document.querySelector("#current-temp");
-  temp.innerHTML = Math.round(celsiusTemperature);
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
-
 let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", changePlaceholderValue);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", fahrenheitConversion);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", celsiusConversion);
 
 placeholder("Sydney");

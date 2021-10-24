@@ -61,14 +61,7 @@
   position: relative;
   top: -28px;
 }
-.active {
-  color: #3c5186;
-  cursor: default;
-  text-decoration: none;
-}
-.active:hover {
-  text-decoration: none;
-}
+
 .current-conditions {
   font-size: 22px;
   margin-top: 40px;
